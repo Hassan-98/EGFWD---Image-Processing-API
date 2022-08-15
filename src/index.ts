@@ -30,7 +30,7 @@ app.use(cors());
 
 //= App Routes
 app.get('/', (req: Request, res: Response) => {
-  res.json({
+  res.status(200).json({
     API: 'Image Processing API',
     Author: 'Hassan Ali',
     Version: '1.0.0',
@@ -38,6 +38,11 @@ app.get('/', (req: Request, res: Response) => {
     'Created At': '2022-08-15',
     Contact: '7assan.3li1998@gmail.com',
   });
+});
+
+//= Health checkpoint
+app.get('/status', (req: Request, res: Response) => {
+  res.status(200).send('Image Processing API Works Fine');
 });
 
 //= API Routes

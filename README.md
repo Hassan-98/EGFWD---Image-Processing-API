@@ -29,3 +29,8 @@ Uses Eslint and prettier to lint any code errors and beautify the code
 ### `npm run build`
 
 Build the src typescript to production dist and lint and beautify any code errors 
+
+
+## health checkpoint for the API
+the health checker that can request to see that your app is working.
+http://localhost:3000/status

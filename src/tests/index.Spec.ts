@@ -4,7 +4,7 @@ import { app } from '../index';
 const request = supertest(app);
 
 describe('Test Server Status', () => {
-  it('should return 200 OK', async () => {
+  it('should return 200 OK for API info', async () => {
     const res = await request.get('/');
 
     expect(res.status).toBe(200);
@@ -16,5 +16,11 @@ describe('Test Server Status', () => {
       'Created At': '2022-08-15',
       Contact: '7assan.3li1998@gmail.com',
     });
+  });
+
+  it('should return 200 OK for health checkpoint', async () => {
+    const res = await request.get('/status');
+
+    expect(res.status).toBe(200);
   });
 });
