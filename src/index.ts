@@ -19,7 +19,7 @@ dotenv.config();
 const port = process.env.PORT || 3000;
 
 //= Create express app
-const app = express();
+export const app = express();
 
 // Req & Res Compressor
 app.use(compression());
@@ -28,16 +28,15 @@ app.use(morgan(':method :url :status - :response-time ms'));
 // Cross-Origin Resource Sharing
 app.use(cors());
 
-
-//= App Routes 
+//= App Routes
 app.get('/', (req: Request, res: Response) => {
   res.json({
-    "API": "Image Processing API",
-    "Author": "Hassan Ali",
-    "Version": "1.0.0",
-    "Description": "EGFWD - Project 1 Image Processing API",
-    "Created At": "2022-08-15",
-    "Contact": "7assan.3li1998@gmail.com"
+    API: 'Image Processing API',
+    Author: 'Hassan Ali',
+    Version: '1.0.0',
+    Description: 'EGFWD - Project 1 Image Processing API',
+    'Created At': '2022-08-15',
+    Contact: '7assan.3li1998@gmail.com',
   });
 });
 

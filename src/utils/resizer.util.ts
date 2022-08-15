@@ -8,9 +8,13 @@ interface ResizerOptions {
 }
 
 // Resizer Function
-export const resizer = async ({ filename, width, height }: ResizerOptions): Promise<false | string> => {
+export const resizer = async ({
+  filename,
+  width,
+  height,
+}: ResizerOptions): Promise<false | string> => {
   let resizedImage: sharp.OutputInfo;
-  
+
   let fileExt = path.extname(filename);
   let fileName = path.basename(filename, fileExt);
 
@@ -21,7 +25,9 @@ export const resizer = async ({ filename, width, height }: ResizerOptions): Prom
     resizedImage = await sharp(originalPath).toFile(filePathResized);
   } else {
     filePathResized = `assets/thumb/${fileName}_${width}x${height}${fileExt}`;
-    resizedImage = await sharp(originalPath).resize(width, height).toFile(filePathResized);
+    resizedImage = await sharp(originalPath)
+      .resize(width, height)
+      .toFile(filePathResized);
   }
 
   if (!resizedImage) return false;

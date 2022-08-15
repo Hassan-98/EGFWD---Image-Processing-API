@@ -4,7 +4,7 @@ import fs from 'fs';
 
 export default (req: Request, res: Response, next: NextFunction): void => {
   let { filename, width, height } = req.query;
-  
+
   let imageWidth = 0;
   let imageHeight = 0;
 
@@ -20,5 +20,7 @@ export default (req: Request, res: Response, next: NextFunction): void => {
     filePathResized = `assets/thumb/${fileName}_${width}x${height}${fileExt}`;
   }
 
-  fs.existsSync(filePathResized) ? res.sendFile(path.resolve(__dirname, '../../', filePathResized)) : next();
-}
+  fs.existsSync(filePathResized)
+    ? res.sendFile(path.resolve(__dirname, '../../', filePathResized))
+    : next();
+};
