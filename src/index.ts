@@ -22,14 +22,6 @@ const port = process.env.PORT || 3000;
 //= Create express app
 const app = express();
 
-// Setting JSON in Body Of Requests
-app.use(express.json())
-// FormData Body Parser
-app.use(bodyParser.json({ limit: '50mb' }));
-app.use(bodyParser.urlencoded({ 
-  limit: '50mb',
-  extended: true 
-}));
 // Req & Res Compressor
 app.use(compression());
 // Morgan Logger
