@@ -1,7 +1,6 @@
 import express, { Request, Response } from 'express';
 
 // Modules
-import bodyParser from 'body-parser';
 import cors from 'cors';
 import compression from 'compression';
 import morgan from 'morgan';
