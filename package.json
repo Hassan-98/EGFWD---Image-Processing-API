@@ -1,7 +1,7 @@
 {
-  "name": "boilerpalte-node-ts-jasmine",
+  "name": "image-processing-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "EGFWD Project 1 - Image Processing API by Hassan Ali",
   "main": "index.js",
   "scripts": {
     "compile": "tsc",
@@ -11,7 +11,7 @@
     "test": "npm run compile && jasmine"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hassan Ali",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
