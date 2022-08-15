@@ -34,4 +34,4 @@ Build the src typescript to production dist and lint and beautify any code error
 ## health checkpoint for the API
 the health checker that can request to see that your app is working. <br />
 `GET /status`
-`curl -i http://localhost:3000/status`
+`curl http://localhost:3000/status`
